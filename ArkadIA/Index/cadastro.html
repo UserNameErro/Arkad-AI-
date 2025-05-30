@@ -134,6 +134,7 @@
         </div>
     </div>
 
+    <script src="../js/config.js"></script>
     <script src="../js/login.js"></script>
     <script>
         async function handleCadastro(event) {
@@ -171,7 +172,7 @@
                 }, 2000);
             } catch (error) {
                 console.error('Erro ao cadastrar:', error);
-                errorMessage.textContent = 'Erro ao realizar cadastro. Tente novamente.';
+                errorMessage.textContent = error.message || 'Erro ao realizar cadastro. Tente novamente.';
                 errorMessage.style.display = 'block';
             }
             
